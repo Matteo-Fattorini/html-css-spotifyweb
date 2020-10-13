@@ -70,9 +70,9 @@ footer {
   position: fixed;
   bottom: 0;
   left: 0;
-  padding: 5px 5px 15px 5px;
+  padding: 20px 5px 15px 5px;
   height: 130px;
-  width: 100%;
+  width: 100vw;
   background-color: #282828;
 }
 
@@ -233,11 +233,12 @@ section p {
 
 footer {
   display: flex;
-  padding-top: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 footer .current-song {
-  flex: 1;
+  flex: 1 1 auto;
   display: flex;
   align-items: center;
 }
@@ -264,7 +265,7 @@ footer .current-song {
 }
 
 footer .currently-playing {
-  flex: 2;
+  flex: 2 0 auto;
   text-align: center;
 }
 
@@ -284,7 +285,7 @@ footer .currently-playing {
 .currently-playing .progress-bar .bar {
   display: inline-block;
   height: 2px;
-  width: 500px;
+  width: 40%;
   background-color: grey;
   vertical-align: middle;
   margin: 0 15px;
@@ -300,7 +301,7 @@ footer .currently-playing {
 }
 
 footer .volume-controls {
-  flex: 1;
+  flex: 1 0 auto;
   display: flex;
   align-items: center;
 }
@@ -314,10 +315,14 @@ footer .volume-controls {
 .volume-controls .bar {
   display: inline-block;
   height: 2px;
-  width: 200px;
+  width: 20%;
   background-color: grey;
   vertical-align: middle;
   margin: 0 15px;
+}
+
+footer img:hover {
+  opacity: 0.5;
 }
 
 /* !media queries */
@@ -333,5 +338,9 @@ footer .volume-controls {
   }
   main {
     margin-left: 70px;
+  }
+
+  .current-song .save-folder {
+    margin-left: 15px;
   }
 }
