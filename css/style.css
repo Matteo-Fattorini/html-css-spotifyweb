@@ -34,12 +34,8 @@ h2 {
   padding-top: 20px;
 }
 
-.song-info a {
-  max-height: 20px;
-  margin: 0;
-}
-
 .subtitle {
+  margin-top: 5px;
   opacity: 0.5;
 }
 
@@ -132,8 +128,7 @@ main .inner-header .flex-container {
   height: 100%;
 }
 
-main .inner-header ul li,
-main .recent ul li {
+main ul li {
   display: inline-block;
   margin: 10px 15px;
   position: relative;
@@ -152,28 +147,47 @@ main .inner-header ul li:hover:before {
   border-bottom: 3px solid #97e2a0;
 }
 
-/* !section recent */
+/* !sections  */
 
-.recent {
-  margin-top: 20px;
-  padding-left: 15px;
-  padding-right: 15px;
+section p {
+  opacity: 0.5;
+  margin-left: 13px;
+  margin-top: 5px;
+  font-size: 1rem;
 }
 
-/* .recent .box-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-content: space-around;
-} */
+.recent,
+.created-for,
+.popular {
+  margin-top: 20px;
+  padding-left: 15px;
+}
 
-.recent .box-container .box {
+.recent h2,
+.created-for h2,
+.popular h2 {
+  margin-left: 12px;
+}
+
+.recent .box-container .box,
+.created-for .box-container .box {
   height: 300px;
   width: 300px;
   margin-top: 30px;
   margin-right: 5px;
   background-position: center;
 }
+
+.popular .box-container .box {
+  height: 300px;
+  width: 300px;
+  margin-top: 30px;
+  margin-right: 5px;
+  background-position: center;
+  border-radius: 50%;
+}
+
+/* !recent images */
 
 .recent .box-container .box.box-1 {
   background-image: url("img/metal_lifting.jpg");
@@ -192,4 +206,22 @@ main .inner-header ul li:hover:before {
 }
 .recent .box-container .box.box-6 {
   background-image: url("img/sinister.jpeg");
+}
+
+/* !created-for images */
+
+.created-for .box-container .box.box-1 {
+  background-image: url("img/radar.jpeg");
+}
+.created-for .box-container .box.box-2 {
+  background-image: url("img/mixdaily.jpeg");
+}
+
+/* !popular */
+
+.popular .box-container .box.box-1 {
+  background-image: url("img/youg.jpeg");
+}
+.popular .box-container .box.box-2 {
+  background-image: url("img/einaudi.jpeg");
 }
