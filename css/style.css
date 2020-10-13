@@ -32,6 +32,7 @@ h2 {
   height: 80px;
   overflow: hidden;
   padding-top: 20px;
+  font-weight: 600;
 }
 
 .subtitle {
@@ -42,8 +43,8 @@ h2 {
 /* !misure layout */
 
 .left-navbar {
-  height: 90vh;
-  width: 10vw;
+  height: calc(100vh - 130px);
+  width: 300px;
   background-color: #000000;
   position: absolute;
   left: 0;
@@ -54,14 +55,13 @@ h2 {
   margin-left: 10vw;
   width: 90vw;
   background-color: #080b12;
-  height: 8vh;
+  height: 100px;
 }
 
 main {
-  height: 82vh;
+  height: calc(100vh - 130px);
   background-color: #141922;
-  margin-left: 10vw;
-
+  margin-left: 300px;
   overflow: scroll;
   overflow-x: hidden;
 }
@@ -70,7 +70,8 @@ footer {
   position: fixed;
   bottom: 0;
   left: 0;
-  height: 10vh;
+  padding: 5px 5px 15px 5px;
+  height: 130px;
   width: 100%;
   background-color: #282828;
 }
@@ -98,11 +99,11 @@ footer {
 /* !navbar-sinistra */
 
 .left-navbar .flex-container {
-  height: 8vh;
-  width: 100%;
+  height: 100px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  padding-left: 20px;
 }
 
 #logo-navbar {
@@ -123,7 +124,9 @@ main .inner-header {
 
 main .inner-header .flex-container {
   display: flex;
-  justify-content: space-around;
+
+  justify-content: center;
+  align-content: center;
   align-items: center;
   height: 100%;
 }
@@ -224,4 +227,111 @@ section p {
 }
 .popular .box-container .box.box-2 {
   background-image: url("img/einaudi.jpeg");
+}
+
+/* !footer */
+
+footer {
+  display: flex;
+  padding-top: 20px;
+}
+
+footer .current-song {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.current-song .on-going-image {
+  height: 50px;
+  width: 50px;
+  background-image: url("/css/img/sinister.jpeg");
+  background-size: cover;
+}
+
+.current-song .song-info {
+  margin-left: 15px;
+  text-align: left;
+}
+
+.current-song .save-folder img {
+  height: 20px;
+  opacity: 0.4;
+  margin-right: 10px;
+}
+.current-song .save-folder {
+  margin-left: 100px;
+}
+
+footer .currently-playing {
+  flex: 2;
+  text-align: center;
+}
+
+.currently-playing .controls img {
+  height: 20px;
+  margin-right: 20px;
+  vertical-align: middle;
+}
+.currently-playing .controls img:nth-child(3) {
+  height: 40px;
+  margin-right: 20px;
+}
+
+.currently-playing .progress-bar {
+  margin-top: 15px;
+}
+.currently-playing .progress-bar .bar {
+  display: inline-block;
+  height: 2px;
+  width: 500px;
+  background-color: grey;
+  vertical-align: middle;
+  margin: 0 15px;
+}
+
+.currently-playing .progress-bar .bar::before,
+.volume-controls .bar::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 30%;
+  background-color: white;
+}
+
+footer .volume-controls {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.volume-controls img {
+  height: 20px;
+  margin-right: 20px;
+  vertical-align: middle;
+}
+
+.volume-controls .bar {
+  display: inline-block;
+  height: 2px;
+  width: 200px;
+  background-color: grey;
+  vertical-align: middle;
+  margin: 0 15px;
+}
+
+/* !media queries */
+
+@media screen and (max-width: 700px) {
+  .left-navbar {
+    height: 90vh;
+    width: 70px;
+    background-color: #000000;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  main {
+    margin-left: 70px;
+  }
 }
