@@ -43,7 +43,7 @@ h2 {
 /* !misure layout */
 
 .left-navbar {
-  height: calc(100vh - 130px);
+  height: calc(100vh - 100px);
   width: 300px;
   background-color: #000000;
   position: absolute;
@@ -71,7 +71,7 @@ footer {
   bottom: 0;
   left: 0;
   padding: 20px 5px 15px 5px;
-  height: 130px;
+  height: 100px;
   width: 100vw;
   background-color: #282828;
 }
@@ -233,26 +233,31 @@ section p {
 
 footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  /* align-content: space-around; */
 }
 
 footer .current-song {
-  flex: 1 1 auto;
   display: flex;
+  flex: 1;
   align-items: center;
+
+  justify-content: flex-start;
 }
 
 .current-song .on-going-image {
   height: 50px;
   width: 50px;
+  display: inline-block;
+
   background-image: url("/css/img/sinister.jpeg");
   background-size: cover;
 }
 
 .current-song .song-info {
-  margin-left: 15px;
   text-align: left;
+  margin: 0 20px;
 }
 
 .current-song .save-folder img {
@@ -260,13 +265,10 @@ footer .current-song {
   opacity: 0.4;
   margin-right: 10px;
 }
-.current-song .save-folder {
-  margin-left: 100px;
-}
 
 footer .currently-playing {
-  flex: 2 0 auto;
   text-align: center;
+  flex: 2 0 auto;
 }
 
 .currently-playing .controls img {
@@ -301,9 +303,10 @@ footer .currently-playing {
 }
 
 footer .volume-controls {
-  flex: 1 0 auto;
   display: flex;
+  flex: 1;
   align-items: center;
+  justify-content: center;
 }
 
 .volume-controls img {
@@ -318,7 +321,6 @@ footer .volume-controls {
   width: 20%;
   background-color: grey;
   vertical-align: middle;
-  margin: 0 15px;
 }
 
 footer img:hover {
@@ -340,7 +342,20 @@ footer img:hover {
     margin-left: 70px;
   }
 
-  .current-song .save-folder {
-    margin-left: 15px;
+  html {
+    font-size: 11px;
+  }
+
+  .current-song .song-info {
+    text-align: left;
+    margin: 0 5px;
+  }
+  footer img {
+    height: 15px !important;
+  }
+
+  .currently-playing .progress-bar {
+    margin-top: 15px;
+    margin-left: -20px;
   }
 }
