@@ -16,6 +16,33 @@ a {
   position: relative;
 }
 
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+.song-info {
+  text-align: center;
+  max-width: 300px;
+  height: 80px;
+  overflow: hidden;
+  padding-top: 20px;
+}
+
+.song-info a {
+  max-height: 20px;
+  margin: 0;
+}
+
+.subtitle {
+  opacity: 0.5;
+}
+
 /* !misure layout */
 
 .left-navbar {
@@ -48,7 +75,7 @@ footer {
   bottom: 0;
   left: 0;
   height: 10vh;
-  width: 100vw;
+  width: 100%;
   background-color: #282828;
 }
 
@@ -64,10 +91,11 @@ footer {
 .outer-header .flex-container .upgrade {
   border: 1px solid white;
   padding: 10px 40px;
-  margin-right: 50px;
+
   border-radius: 30px;
+  font-size: 0.8rem;
 }
-.outer-header .flex-container .upg8rade:hover {
+.outer-header .flex-container .upgrade:hover {
   opacity: 0.7;
 }
 
@@ -86,13 +114,14 @@ footer {
 }
 
 /* !main */
+/* !inner header */
 
 main .inner-header {
   width: 100%;
   height: 8vh;
   opacity: 0.5;
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 
@@ -103,15 +132,15 @@ main .inner-header .flex-container {
   height: 100%;
 }
 
-main ul li {
+main .inner-header ul li,
+main .recent ul li {
   display: inline-block;
   margin: 10px 15px;
   position: relative;
-  z-index: 1;
   padding: 7px 0;
 }
 
-main ul li:hover:before {
+main .inner-header ul li:hover:before {
   content: "";
   position: absolute;
   left: 50%;
@@ -121,4 +150,46 @@ main ul li:hover:before {
 
   transform: translate(-50%, 0);
   border-bottom: 3px solid #97e2a0;
+}
+
+/* !section recent */
+
+.recent {
+  margin-top: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* .recent .box-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: space-around;
+} */
+
+.recent .box-container .box {
+  height: 300px;
+  width: 300px;
+  margin-top: 30px;
+  margin-right: 5px;
+  background-position: center;
+}
+
+.recent .box-container .box.box-1 {
+  background-image: url("img/metal_lifting.jpg");
+}
+.recent .box-container .box.box-2 {
+  background-image: url("img/stranger.jpeg");
+}
+.recent .box-container .box.box-3 {
+  background-image: url("img/aquietplace.jpeg");
+}
+.recent .box-container .box.box-4 {
+  background-image: url("img/split.jpeg");
+}
+.recent .box-container .box.box-5 {
+  background-image: url("img/cure.jpeg");
+}
+.recent .box-container .box.box-6 {
+  background-image: url("img/sinister.jpeg");
 }
