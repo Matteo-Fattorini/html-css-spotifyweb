@@ -566,7 +566,7 @@ footer img:hover {
     background-color: grey;
   }
 
-  .volume-controls .bar::after {
+  .volume-controls .bar::before {
     content: "";
     display: block;
     width: 2px;
