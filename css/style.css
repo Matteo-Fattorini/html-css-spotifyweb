@@ -232,6 +232,9 @@ h2:hover {
 #special-span {
   opacity: 1;
 }
+#special-span:hover {
+  opacity: 0.6;
+}
 
 /* !left navbar invisibile  */
 
@@ -436,8 +439,14 @@ footer .currently-playing {
   background-color: white;
 }
 
-.volume-controls .bar::before:hover {
+.volume-controls:hover .bar::before,
+.currently-playing .progress-bar:hover .bar::before {
   background-color: green;
+  cursor: pointer;
+}
+.volume-controls:hover,
+.currently-playing .progress-bar:hover {
+  cursor: pointer;
 }
 
 footer .volume-controls {
@@ -486,7 +495,7 @@ footer img:hover {
   }
 
   html {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .current-song .song-info {
