@@ -584,4 +584,13 @@ footer img:hover {
     text-align: left;
     margin-bottom: 20px;
   }
+
+  body {
+    background-color: black;
+  }
+
+  main {
+    height: 100%;
+    overflow: unset;
+  }
 }
