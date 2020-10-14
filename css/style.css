@@ -15,6 +15,10 @@ a:hover {
   opacity: 0.6;
 }
 
+.show-when-small {
+  display: none;
+}
+
 .relative {
   position: relative;
 }
@@ -67,6 +71,7 @@ main {
   margin-left: 200px;
   overflow: scroll;
   overflow-x: hidden;
+  padding-top: 20px;
 }
 
 footer {
@@ -228,12 +233,12 @@ h2:hover {
   opacity: 1;
 }
 
+/* !left navbar invisibile  */
+
 /* !main */
 /* !inner header */
 
 main .inner-header {
-  width: 100%;
-  height: 8vh;
   text-align: center;
   text-transform: uppercase;
   font-size: 1rem;
@@ -375,19 +380,19 @@ footer .current-song {
   width: 50px;
   display: inline-block;
 
-  background-image: url("/css/img/sinister.jpeg");
+  background-image: url("img/sinister.jpeg");
   background-size: cover;
 }
 
 .current-song .song-info {
   text-align: left;
-  margin: 0 20px;
 }
 
 .current-song .save-folder img {
   height: 20px;
   opacity: 0.4;
   margin-right: 10px;
+  margin-left: 10px;
 }
 
 .current-song .save-folder img:hover {
@@ -449,11 +454,10 @@ footer .volume-controls {
 }
 
 .volume-controls .bar {
-  display: inline-block;
   height: 2px;
-  width: 20%;
+
+  min-width: 100px;
   background-color: grey;
-  vertical-align: middle;
 }
 
 footer img:hover {
@@ -496,6 +500,7 @@ footer img:hover {
   .inner-header {
     margin-bottom: 50px;
     text-align: center;
+    margin-top: 50px;
   }
 
   .currently-playing .progress-bar {
@@ -505,6 +510,59 @@ footer img:hover {
 
   .hide-when-small {
     display: none;
+  }
+
+  .show-when-small {
+    display: block;
+  }
+
+  .outer-header {
+    justify-content: center;
+  }
+
+  .show-when-small {
+    position: relative;
+    height: calc(100vh - 100px);
+  }
+
+  .show-when-small .small-images img {
+    height: 30px;
+
+    margin-top: 10px;
+  }
+
+  .show-when-small img:hover {
+    opacity: 0.6;
+  }
+
+  .show-when-small .bottom-images {
+    position: absolute;
+    bottom: 10px;
+  }
+  .show-when-small .bottom-images img {
+    height: 25px;
+    opacity: 0.6;
+    margin-top: 10px;
+  }
+  .show-when-small .bottom-images img:hover {
+    opacity: 1;
+  }
+
+  .volume-controls .bar {
+    height: 70px;
+    margin-right: 10px;
+
+    min-width: 2px;
+    background-color: grey;
+  }
+
+  .volume-controls .bar::after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 30px;
+    margin-top: 40px;
+    background-color: white;
   }
 }
 
