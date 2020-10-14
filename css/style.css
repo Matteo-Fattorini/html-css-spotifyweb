@@ -300,8 +300,8 @@ section p {
   margin-left: 12px;
 }
 
-.recent .box-container .box,
-.created-for .box-container .box {
+.recent .box_container .box,
+.created-for .box_container .box {
   height: 300px;
   width: 300px;
   margin-top: 30px;
@@ -309,56 +309,49 @@ section p {
   background-position: center;
 }
 
-.popular .box-container .box {
+.popular .box_container .box {
   height: 300px;
   width: 300px;
   margin-top: 30px;
   margin-right: 5px;
-  background-position: center;
+
   border-radius: 50%;
+  overflow: hidden;
 }
 
-/* !recent images */
-
-.recent .box-container .box.box-1 {
-  background-image: url("img/metal_lifting.jpg");
-}
-.recent .box-container .box.box-2 {
-  background-image: url("img/stranger.jpeg");
-}
-.recent .box-container .box.box-3 {
-  background-image: url("img/aquietplace.jpeg");
-}
-.recent .box-container .box.box-4 {
-  background-image: url("img/split.jpeg");
-}
-.recent .box-container .box.box-5 {
-  background-image: url("img/cure.jpeg");
-}
-.recent .box-container .box.box-6 {
-  background-image: url("img/sinister.jpeg");
+.box {
+  position: relative;
 }
 
-/* !created-for images */
-
-.created-for .box-container .box.box-1 {
-  background-image: url("img/radar.jpeg");
+.layover {
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.8s ease;
 }
-.created-for .box-container .box.box-2 {
-  background-image: url("img/mixdaily.jpeg");
+
+[class*="box-"]:hover .layover {
+  opacity: 1;
+  cursor: pointer;
+}
+[class*="box-"]:hover .album-image {
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.album-image {
+  background-color: black;
+  transition: opacity 0.8 ease;
+  opacity: 1;
 }
 
 /* !popular */
 
 .popular {
   margin-bottom: 50px;
-}
-
-.popular .box-container .box.box-1 {
-  background-image: url("img/youg.jpeg");
-}
-.popular .box-container .box.box-2 {
-  background-image: url("img/einaudi.jpeg");
 }
 
 /* !footer */
@@ -512,5 +505,15 @@ footer img:hover {
 
   .hide-when-small {
     display: none;
+  }
+}
+
+@media screen and (max-height: 850px) {
+  .navbar-footer {
+    position: static;
+
+    width: calc(100% - 20px);
+    text-align: left;
+    margin-bottom: 20px;
   }
 }
