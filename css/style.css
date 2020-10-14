@@ -11,6 +11,9 @@ a {
   color: inherit;
   text-decoration: none;
 }
+a:hover {
+  opacity: 0.6;
+}
 
 .relative {
   position: relative;
@@ -44,7 +47,7 @@ h2 {
 
 .left-navbar {
   height: calc(100vh - 100px);
-  width: 300px;
+  width: 200px;
   background-color: #000000;
   position: absolute;
   left: 0;
@@ -52,8 +55,8 @@ h2 {
 }
 
 .outer-header {
-  margin-left: 10vw;
-  width: 90vw;
+  margin-left: 200px;
+  width: calc(100% - 200px);
   background-color: #080b12;
   height: 100px;
 }
@@ -61,7 +64,7 @@ h2 {
 main {
   height: calc(100vh - 130px);
   background-color: #141922;
-  margin-left: 300px;
+  margin-left: 200px;
   overflow: scroll;
   overflow-x: hidden;
 }
@@ -88,12 +91,14 @@ footer {
 .outer-header .flex-container .upgrade {
   border: 1px solid white;
   padding: 10px 40px;
-
+  margin-right: 30px;
+  transition: all 300ms;
   border-radius: 30px;
   font-size: 0.8rem;
 }
 .outer-header .flex-container .upgrade:hover {
   opacity: 0.7;
+  transform: scale(1.2);
 }
 
 /* !navbar-sinistra */
@@ -103,11 +108,124 @@ footer {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 40px;
+}
+
+.left-navbar {
   padding-left: 20px;
+  font-weight: 600;
 }
 
 #logo-navbar {
   height: 50%;
+}
+#logo-navbar:hover,
+h2:hover {
+  display: inline-block;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.left-navbar .navbar-images img {
+  height: 30px;
+  vertical-align: middle;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.nav-hover:hover,
+.left-navbar li:hover {
+  border-left: 3px solid green;
+  margin-left: -20px;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.nav-hover:hover span,
+.left-navbar span:hover,
+.left-navbar li:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.nav-hover {
+  margin-bottom: 10px;
+}
+
+.navbar-images span {
+  opacity: 0.6;
+  margin-left: 5px;
+}
+
+.navbar-playlist {
+  margin-top: 20px;
+}
+
+.navbar-playlist .add-playlist {
+  height: 50px;
+  width: 50px;
+  background-color: grey;
+  margin-top: 20px;
+  position: relative;
+  display: inline-block;
+}
+.navbar-playlist .add-playlist:hover ~ span {
+  opacity: 1;
+}
+
+.navbar-playlist .add-playlist img {
+  height: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.align {
+  height: 50px;
+}
+.navbar-playlist span {
+  opacity: 0.6;
+  position: relative;
+  bottom: 40%;
+}
+
+.new-playlist {
+  margin-top: 60px;
+}
+.new-playlist li {
+  list-style-type: none;
+  margin-bottom: 20px;
+  opacity: 0.6;
+}
+
+.navbar-footer {
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 20px);
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.navbar-footer img {
+  height: 25px;
+  vertical-align: middle;
+  opacity: 0.6;
+  margin-right: 5px;
+}
+
+.navbar-footer .install {
+  opacity: 0.6;
+}
+
+.navbar-footer hr {
+  width: 100%;
+  opacity: 0.6;
+  margin: 10px 0;
+}
+
+#special-span {
+  opacity: 1;
 }
 
 /* !main */
@@ -116,7 +234,7 @@ footer {
 main .inner-header {
   width: 100%;
   height: 8vh;
-  opacity: 0.5;
+  text-align: center;
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: 600;
@@ -124,7 +242,6 @@ main .inner-header {
 
 main .inner-header .flex-container {
   display: flex;
-
   justify-content: center;
   align-content: center;
   align-items: center;
@@ -138,6 +255,10 @@ main ul li {
   padding: 7px 0;
 }
 
+main .inner-header ul li {
+  opacity: 0.5;
+}
+
 main .inner-header ul li:hover:before {
   content: "";
   position: absolute;
@@ -148,6 +269,13 @@ main .inner-header ul li:hover:before {
 
   transform: translate(-50%, 0);
   border-bottom: 3px solid #97e2a0;
+}
+
+main .inner-header ul li:hover {
+  opacity: 1;
+}
+main .inner-header ul li a:hover {
+  opacity: 1;
 }
 
 /* !sections  */
@@ -222,6 +350,10 @@ section p {
 
 /* !popular */
 
+.popular {
+  margin-bottom: 50px;
+}
+
 .popular .box-container .box.box-1 {
   background-image: url("img/youg.jpeg");
 }
@@ -235,7 +367,6 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* align-content: space-around; */
 }
 
 footer .current-song {
@@ -264,6 +395,11 @@ footer .current-song {
   height: 20px;
   opacity: 0.4;
   margin-right: 10px;
+}
+
+.current-song .save-folder img:hover {
+  opacity: 1;
+  cursor: pointer;
 }
 
 footer .currently-playing {
@@ -302,6 +438,10 @@ footer .currently-playing {
   background-color: white;
 }
 
+.volume-controls .bar::before:hover {
+  background-color: green;
+}
+
 footer .volume-controls {
   display: flex;
   flex: 1;
@@ -325,13 +465,14 @@ footer .volume-controls {
 
 footer img:hover {
   opacity: 0.5;
+  cursor: pointer;
 }
 
 /* !media queries */
 
 @media screen and (max-width: 700px) {
   .left-navbar {
-    height: 90vh;
+    height: calc(100vh - 100px);
     width: 70px;
     background-color: #000000;
     position: absolute;
@@ -342,8 +483,13 @@ footer img:hover {
     margin-left: 70px;
   }
 
+  .outer-header {
+    margin-left: 70px;
+    width: calc(100% - 70px);
+  }
+
   html {
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .current-song .song-info {
@@ -354,8 +500,17 @@ footer img:hover {
     height: 15px !important;
   }
 
+  .inner-header {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
   .currently-playing .progress-bar {
     margin-top: 15px;
     margin-left: -20px;
+  }
+
+  .hide-when-small {
+    display: none;
   }
 }
