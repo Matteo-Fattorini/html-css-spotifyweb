@@ -8,6 +8,7 @@
 
 body {
   background-color: black;
+  overflow: auto;
 }
 
 /* !classi comuni  */
@@ -695,9 +696,10 @@ footer img:hover {
   }
 }
 
-@media screen and (max-height: 600px) {
+@media screen and (max-height: 800px) {
   main {
     height: 100%;
+    width: 100%;
   }
 }
 
