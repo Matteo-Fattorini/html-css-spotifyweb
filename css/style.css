@@ -140,7 +140,7 @@ h2:hover {
 
 .nav-hover:hover,
 .left-navbar li:hover {
-  border-left: 3px solid green;
+  border-left: 3px solid #97e2a0;
   margin-left: -20px;
   padding-left: 20px;
   cursor: pointer;
@@ -324,7 +324,6 @@ section p {
   margin-right: 5px;
 
   border-radius: 50%;
-  overflow: hidden;
 }
 
 .box {
@@ -372,9 +371,8 @@ footer {
 
 footer .current-song {
   display: flex;
-  flex: 1;
+  flex: 1 0 auto;
   align-items: center;
-
   justify-content: flex-start;
 }
 
@@ -389,7 +387,8 @@ footer .current-song {
 
 .current-song .song-info {
   text-align: left;
-  padding-left: 5px;
+  min-width: 50px;
+  padding-left: 15px;
 }
 
 .current-song .save-folder img {
@@ -442,7 +441,7 @@ footer .currently-playing {
 
 .volume-controls:hover .bar::before,
 .currently-playing .progress-bar:hover .bar::before {
-  background-color: green;
+  background-color: #97e2a0;
   cursor: pointer;
 }
 .volume-controls:hover,
@@ -452,7 +451,7 @@ footer .currently-playing {
 
 footer .volume-controls {
   display: flex;
-  flex: 1;
+  flex: 1 0 auto;
   align-items: center;
   justify-content: center;
 }
@@ -486,6 +485,22 @@ footer img:hover {
     left: 0;
     top: 0;
   }
+
+  .recent,
+  .created-for,
+  .popular {
+    margin-top: 20px;
+    padding-left: 0px;
+    text-align: center;
+  }
+
+  .recent > p,
+  .recent > h2,
+  .created-for > p,
+  .created-for > h2 .popular > p,
+  .popular > h2 {
+    text-align: left;
+  }
   main {
     margin-left: 70px;
   }
@@ -501,7 +516,8 @@ footer img:hover {
 
   .current-song .song-info {
     text-align: left;
-    margin: 0 5px;
+    padding-left: 0;
+    min-width: 50px;
   }
   footer img {
     height: 15px !important;
@@ -537,7 +553,6 @@ footer img:hover {
 
   .show-when-small .small-images img {
     height: 30px;
-
     margin-top: 10px;
   }
 
@@ -561,7 +576,6 @@ footer img:hover {
   .volume-controls .bar {
     height: 70px;
     margin-right: 10px;
-
     min-width: 2px;
     background-color: grey;
   }
@@ -574,12 +588,17 @@ footer img:hover {
     margin-top: 40px;
     background-color: white;
   }
-}
 
+  .current-song .on-going-image {
+    display: none;
+  }
+  .currently-playing .controls img:nth-child(3) {
+    height: 30px !important;
+  }
+}
 @media screen and (max-height: 850px) {
   .navbar-footer {
-    position: static;
-
+    position: unset;
     width: calc(100% - 20px);
     text-align: left;
     margin-bottom: 20px;
