@@ -503,7 +503,7 @@ footer img:hover {
     top: 0;
   }
 
-  .recent,
+  /* .recent,
   .created-for,
   .popular {
     margin-top: 20px;
@@ -517,7 +517,7 @@ footer img:hover {
   .created-for > h2 .popular > p,
   .popular > h2 {
     text-align: left;
-  }
+  } */
   main {
     margin-left: 70px;
   }
@@ -592,7 +592,7 @@ footer img:hover {
 
   .volume-controls .bar {
     height: 70px;
-    margin-right: 10px;
+    margin-right: 25px;
     min-width: 2px;
     background-color: grey;
   }
