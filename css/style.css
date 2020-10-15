@@ -697,9 +697,12 @@ footer img:hover {
 }
 
 @media screen and (max-height: 800px) {
-  main {
-    height: 100%;
-    width: 100%;
+  .left-navbar {
+    overflow: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
   }
 }
 
